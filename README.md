@@ -48,14 +48,18 @@ LibrosAPI/
 
 ```bash
 git clone https://github.com/emersonUDB/LibrosAPI2026.git
-cd LibrosAPI
+cd LibrosAPI2026
 npm install
 ```
 
 2. **Crear el archivo `.env`** copiando el ejemplo:
 
 ```bash
+# Linux / Mac
 cp .env.example .env
+
+# Windows
+copy .env.example .env
 ```
 
 Editar `.env` con los datos de tu base de datos:
