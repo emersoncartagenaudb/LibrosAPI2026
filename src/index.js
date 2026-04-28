@@ -8,6 +8,7 @@ const path = require('path');
 const routes = require('./routes/index');
 
 const app = express();
+app.set('trust proxy', 1);
 
 const limiter = rateLimit({
     windowMs: 30 * 60 * 1000,
