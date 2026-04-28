@@ -3,7 +3,10 @@ const response = require('../helpers/response');
 
 exports.findAll = (req, res) => {
     LibroModel.getAll((err, data) => {
-        if (err) return response.error(res, 'Ha ocurrido un error al obtener los libros.', 500, 'ERROR_INTERNO');
+        if (err) {
+            console.error('[findAll] Error:', err);
+            return response.error(res, 'Ha ocurrido un error al obtener los libros.', 500, 'ERROR_INTERNO');
+        }
         return response.success(res, data, 'Libros obtenidos exitosamente.');
     });
 };
